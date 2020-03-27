@@ -14,8 +14,8 @@ fedora-infra-map
         :alt: Documentation Status
 
 
-.. image:: https://pyup.io/repos/github/zlopez/fedora-infra-map/shield.svg
-     :target: https://pyup.io/repos/github/zlopez/fedora-infra-map/
+.. image:: https://pyup.io/repos/github/Zlopez/fedora-infra-map/shield.svg
+     :target: https://pyup.io/repos/github/Zlopez/fedora-infra-map/
      :alt: Updates
 
 
