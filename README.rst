@@ -6,8 +6,8 @@ fedora-infra-map
 .. image:: https://img.shields.io/pypi/v/fedora-infra-map.svg
         :target: https://pypi.python.org/pypi/fedora-infra-map
 
-.. image:: https://img.shields.io/travis/zlopez/fedora-infra-map.svg
-        :target: https://travis-ci.com/zlopez/fedora-infra-map
+.. image:: https://img.shields.io/travis/Zlopez/fedora-infra-map.svg
+        :target: https://travis-ci.com/Zlopez/fedora-infra-map
 
 .. image:: https://readthedocs.org/projects/fedora-infra-map/badge/?version=latest
         :target: https://fedora-infra-map.readthedocs.io/en/latest/?badge=latest
