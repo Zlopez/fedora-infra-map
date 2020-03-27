@@ -3,24 +3,24 @@ fedora-infra-map
 ================
 
 
-.. image:: https://img.shields.io/pypi/v/fedora_infra_map.svg
-        :target: https://pypi.python.org/pypi/fedora_infra_map
+.. image:: https://img.shields.io/pypi/v/fedora-infra-map.svg
+        :target: https://pypi.python.org/pypi/fedora-infra-map
 
-.. image:: https://img.shields.io/travis/zlopez/fedora_infra_map.svg
-        :target: https://travis-ci.com/zlopez/fedora_infra_map
+.. image:: https://img.shields.io/travis/zlopez/fedora-infra-map.svg
+        :target: https://travis-ci.com/zlopez/fedora-infra-map
 
 .. image:: https://readthedocs.org/projects/fedora-infra-map/badge/?version=latest
         :target: https://fedora-infra-map.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
 
-.. image:: https://pyup.io/repos/github/zlopez/fedora_infra_map/shield.svg
-     :target: https://pyup.io/repos/github/zlopez/fedora_infra_map/
+.. image:: https://pyup.io/repos/github/zlopez/fedora-infra-map/shield.svg
+     :target: https://pyup.io/repos/github/zlopez/fedora-infra-map/
      :alt: Updates
 
 
 
-Interactive map of the Fedora Infrastructure applications 
+Interactive map of the Fedora Infrastructure applications
 
 
 * Free software: GNU General Public License v3
