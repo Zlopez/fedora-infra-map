@@ -12,10 +12,11 @@ Entities
 Inner definitions of objects we will work with. This is the core of the whole application. Bellow is the directory structure.
 
 ::
+
    Entities
-   + init.py
-   + node.py
-   + edge.py
+   +-- init.py
+   +-- node.py
+   +-- edge.py
 
 node.py
 ~~~~~~~
