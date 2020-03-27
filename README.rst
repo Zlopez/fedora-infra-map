@@ -20,7 +20,8 @@ fedora-infra-map
 
 
 
-Interactive map of the Fedora Infrastructure applications
+Fedora Infra Map is interactive map of the applications hosted by Fedora Infrastructure. The map allows users to get information about applications and the relations between them. The map will be represented by graph consisting of nodes and edges.
+
 
 
 * Free software: GNU General Public License v3

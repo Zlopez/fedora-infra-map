@@ -12,6 +12,8 @@ Welcome to fedora-infra-map's documentation!
    contributing
    authors
    history
+   requirements
+   design
 
 Indices and tables
 ==================
