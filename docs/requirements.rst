@@ -9,6 +9,6 @@ List of requirements
 
 * Interactive web interface
 * Map of the fedora infra represented by nodes and edges
-* Querying of the specific nodes by various filters
+* Querying of the specific nodes, edges by attributes
 * Node represents app itself (name, description, ownership, url)
-* Edge represents relation between apps (type, description)
+* Edge represents relationship between apps (type, description)
