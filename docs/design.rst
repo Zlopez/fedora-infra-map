@@ -118,9 +118,16 @@ This is the outer layer of clean architecture and contains wrappers that are cal
   fedora_infra_map
   +-- database
     +-- csv.py
+  +-- config.py
 
 
 csv
 ~~~
 
 This class implements database wrapper around CSV files.
+
+
+config
+~~~~~~
+
+This class is centralized implementation of application configuration.
