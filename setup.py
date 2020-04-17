@@ -4,49 +4,54 @@
 
 from setuptools import setup, find_packages
 
-with open('README.rst') as readme_file:
+with open("README.rst") as readme_file:
     readme = readme_file.read()
 
-with open('HISTORY.rst') as history_file:
+with open("HISTORY.rst") as history_file:
     history = history_file.read()
 
-requirements = ['Click>=7.0', ]
 
-setup_requirements = ['pytest-runner', ]
+def get_requirements(requirements_file="requirements.txt"):
+    """Get the contents of a file listing the requirements.
+    :arg requirements_file: path to a requirements file
+    :type requirements_file: string
+    :returns: the list of requirements, or an empty list if
+              `requirements_file` could not be opened or read
+    :return type: list
+    """
 
-test_requirements = ['pytest>=3', ]
+    lines = [
+        line.rstrip().split("#")[0] for line in open(requirements_file).readlines()
+    ]
+    return [line for line in lines if not line.startswith("#")]
+
 
 setup(
     author="Michal Konečný",
-    author_email='michal.konecny@packetseekers.eu',
-    python_requires='>=3.5',
+    author_email="michal.konecny@packetseekers.eu",
+    python_requires=">=3.5",
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
-        'Natural Language :: English',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
+        "Development Status :: 2 - Pre-Alpha",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+        "Natural Language :: English",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
     ],
     description="Interactive map of the Fedora Infrastructure applications ",
-    entry_points={
-        'console_scripts': [
-            'fedora_infra_map=fedora_infra_map.cli:main',
-        ],
-    },
-    install_requires=requirements,
+    entry_points={"console_scripts": ["fedora_infra_map=fedora_infra_map.cli:main",],},
+    install_requires=get_requirements(),
     license="GNU General Public License v3",
-    long_description=readme + '\n\n' + history,
+    long_description=readme + "\n\n" + history,
     include_package_data=True,
-    keywords='fedora_infra_map',
-    name='fedora_infra_map',
-    packages=find_packages(include=['fedora_infra_map', 'fedora_infra_map.*']),
-    setup_requires=setup_requirements,
-    test_suite='tests',
-    tests_require=test_requirements,
-    url='https://github.com/zlopez/fedora_infra_map',
-    version='0.1.0',
+    keywords="fedora_infra_map",
+    name="fedora_infra_map",
+    packages=find_packages(include=["fedora_infra_map", "fedora_infra_map.*"]),
+    test_suite="tests",
+    tests_require=get_requirements("requirements_test.txt"),
+    url="https://github.com/zlopez/fedora_infra_map",
+    version="0.1.0",
     zip_safe=False,
 )
