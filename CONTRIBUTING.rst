@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/zlopez/fedora_infra_map/issues.
+Report bugs at https://github.com/Zlopez/fedora-infra-map/issues.
 
 If you are reporting a bug, please include:
 
@@ -45,7 +45,7 @@ articles, and such.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/zlopez/fedora_infra_map/issues.
+The best way to send feedback is to file an issue at https://github.com/Zlopez/fedora-infra-map/issues.
 
 If you are proposing a feature:
 
@@ -62,7 +62,7 @@ Ready to contribute? Here's how to set up `fedora_infra_map` for local developme
 1. Fork the `fedora_infra_map` repo on GitHub.
 2. Clone your fork locally::
 
-    $ git clone git@github.com:your_name_here/fedora_infra_map.git
+    $ git clone git@github.com:your_name_here/fedora-infra-map.git
 
 3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
 
@@ -103,7 +103,7 @@ Before you submit a pull request, check that it meets these guidelines:
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
 3. The pull request should work for Python 3.5, 3.6, 3.7 and 3.8, and for PyPy. Check
-   https://travis-ci.com/zlopez/fedora_infra_map/pull_requests
+   https://travis-ci.com/Zlopez/fedora-infra-map/pull_requests
    and make sure that the tests pass for all supported Python versions.
 
 Tips
