@@ -121,3 +121,25 @@ def test_node_model_comparison():
     node2 = node.Node.from_dict(node_dict)
 
     assert node1 == node2
+
+
+def test_node_model_comparison_wrong_object():
+    """
+    Assert that comparison operator is failing with wrong type of object.
+    """
+    code = uuid.uuid4()
+    node_dict = {
+        "code": code,
+        "name": "test",
+        "description": "Test app",
+        "issues_url": "example.com/issues",
+        "sources_url": "example.com/sources",
+        "homepage": "example.com",
+        "prod_url": "example.com",
+        "stg_url": "stg.example.com",
+        "node_type": node.NodeType.OWNED_BY_CPE,
+    }
+
+    node1 = node.Node.from_dict(node_dict)
+
+    assert node1 != {}

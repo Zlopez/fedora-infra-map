@@ -23,8 +23,6 @@ jobs:
       env: TOXENV=mypy
     - python: 3.8
       env: TOXENV=docs
-    - python: 3.8
-      env: TOXENV=diff-cover
 
     - stage: test
       python: 3.7
