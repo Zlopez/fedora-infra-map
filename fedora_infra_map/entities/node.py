@@ -113,11 +113,13 @@ class Node:
             "node_type": self.node_type,
         }
 
-    def __eq__(self, other: Node) -> bool:
+    def __eq__(self, other: object) -> bool:
         """
         Comparison operator.
 
         Return:
             Compare output.
         """
+        if not isinstance(other, Node):
+            return NotImplemented
         return self.to_dict() == other.to_dict()
