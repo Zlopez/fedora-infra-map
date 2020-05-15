@@ -17,6 +17,7 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 """Test file for entities/node.py file."""
 import uuid
+
 from fedora_infra_map.entities import node
 
 
@@ -48,9 +49,9 @@ def test_node_model_init():
     assert test_node.node_type == node.NodeType.OWNED_BY_CPE
 
 
-def test_node_model_from_dict():
+def test_node_object_from_dict():
     """
-    Assert that node model could be initialized from the dict.
+    Assert that node object could be initialized from the dict.
     """
     code = uuid.uuid4()
     test_node = node.Node.from_dict(
@@ -78,9 +79,9 @@ def test_node_model_from_dict():
     assert test_node.node_type == node.NodeType.OWNED_BY_CPE
 
 
-def test_node_model_to_dict():
+def test_node_object_to_dict():
     """
-    Assert that node model could be saved to dict.
+    Assert that node object could be saved to dict.
     """
     code = uuid.uuid4()
     node_dict = {
@@ -100,7 +101,7 @@ def test_node_model_to_dict():
     assert test_node.to_dict() == node_dict
 
 
-def test_node_model_comparison():
+def test_node_object_comparison():
     """
     Assert that comparison operator is working.
     """
@@ -123,7 +124,7 @@ def test_node_model_comparison():
     assert node1 == node2
 
 
-def test_node_model_comparison_wrong_object():
+def test_node_object_comparison_wrong_object():
     """
     Assert that comparison operator is failing with wrong type of object.
     """
