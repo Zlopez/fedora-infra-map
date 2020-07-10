@@ -91,7 +91,7 @@ class Node:
             homepage=adict["homepage"],
             prod_url=adict["prod_url"],
             stg_url=adict["stg_url"],
-            node_type=adict["node_type"],
+            node_type=NodeType(adict["node_type"]),
         )
 
     def to_dict(self) -> dict:
@@ -110,7 +110,7 @@ class Node:
             "homepage": self.homepage,
             "prod_url": self.prod_url,
             "stg_url": self.stg_url,
-            "node_type": self.node_type,
+            "node_type": self.node_type.value,
         }
 
     def __eq__(self, other: object) -> bool:

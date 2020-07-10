@@ -93,7 +93,7 @@ def test_node_object_to_dict():
         "homepage": "example.com",
         "prod_url": "example.com",
         "stg_url": "stg.example.com",
-        "node_type": node.NodeType.OWNED_BY_CPE,
+        "node_type": node.NodeType.OWNED_BY_CPE.value,
     }
 
     test_node = node.Node.from_dict(node_dict)
