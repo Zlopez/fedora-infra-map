@@ -102,10 +102,10 @@ class Edge:
             code=adict["code"],
             name=adict["name"],
             description=adict["description"],
-            direction=adict["direction"],
-            start_node=adict["start_node"],
-            end_node=adict["end_node"],
-            edge_type=adict["edge_type"],
+            direction=EdgeDirection(adict["direction"]),
+            start_node=Node.from_dict(adict["start_node"]),
+            end_node=Node.from_dict(adict["end_node"]),
+            edge_type=EdgeType(adict["edge_type"]),
         )
 
     def to_dict(self) -> dict:
@@ -119,10 +119,10 @@ class Edge:
             "code": self.code,
             "name": self.name,
             "description": self.description,
-            "direction": self.direction,
-            "start_node": self.start_node,
-            "end_node": self.end_node,
-            "edge_type": self.edge_type,
+            "direction": self.direction.value,
+            "start_node": self.start_node.to_dict(),
+            "end_node": self.end_node.to_dict(),
+            "edge_type": self.edge_type.value,
         }
 
     def __eq__(self, other: object) -> bool:

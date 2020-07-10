@@ -60,3 +60,44 @@ def test_serialize_node():
     json_node = json.dumps(test_node, cls=ser.NodeJsonEncoder)
 
     assert json.loads(json_node) == json.loads(expected_json)
+
+
+def test_serialize_node_from_dict():
+    """
+    Assert that serialization to JSON works when object is created from dict.
+    """
+    code = uuid.uuid4()
+
+    test_node = node.Node.from_dict(
+        {
+            "code": code,
+            "name": "test",
+            "description": "Test app",
+            "issues_url": "example.com/issues",
+            "sources_url": "example.com/sources",
+            "homepage": "example.com",
+            "prod_url": "example.com",
+            "stg_url": "stg.example.com",
+            "node_type": node.NodeType.OWNED_BY_CPE.value,
+        }
+    )
+
+    expected_json = """
+        {{
+            "code": "{}",
+            "name": "test",
+            "description": "Test app",
+            "issues_url": "example.com/issues",
+            "sources_url": "example.com/sources",
+            "homepage": "example.com",
+            "prod_url": "example.com",
+            "stg_url": "stg.example.com",
+            "node_type": {}
+        }}
+    """.format(
+        code, node.NodeType.OWNED_BY_CPE.value
+    )
+
+    json_node = json.dumps(test_node, cls=ser.NodeJsonEncoder)
+
+    assert json.loads(json_node) == json.loads(expected_json)

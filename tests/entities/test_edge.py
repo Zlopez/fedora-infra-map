@@ -76,17 +76,15 @@ def test_edge_object_from_dict():
     Assert that edge object could be initialized from the dict.
     """
     code = uuid.uuid4()
-    start_node = mock.Mock()
-    end_node = mock.Mock()
     test_edge = edge.Edge.from_dict(
         {
             "code": code,
             "name": "test",
             "description": "Test relation",
-            "direction": edge.EdgeDirection.START_TO_END,
-            "start_node": start_node,
-            "end_node": end_node,
-            "edge_type": edge.EdgeType.FEDORA_MESSAGING,
+            "direction": edge.EdgeDirection.START_TO_END.value,
+            "start_node": START_NODE.to_dict(),
+            "end_node": END_NODE.to_dict(),
+            "edge_type": edge.EdgeType.FEDORA_MESSAGING.value,
         }
     )
 
@@ -94,8 +92,8 @@ def test_edge_object_from_dict():
     assert test_edge.name == "test"
     assert test_edge.description == "Test relation"
     assert test_edge.direction == edge.EdgeDirection.START_TO_END
-    assert test_edge.start_node == start_node
-    assert test_edge.end_node == end_node
+    assert test_edge.start_node == START_NODE
+    assert test_edge.end_node == END_NODE
     assert test_edge.edge_type == edge.EdgeType.FEDORA_MESSAGING
 
 
@@ -104,16 +102,14 @@ def test_edge_object_to_dict():
     Assert that edge object could be saved to dict.
     """
     code = uuid.uuid4()
-    start_node = mock.Mock()
-    end_node = mock.Mock()
     edge_dict = {
         "code": code,
         "name": "test",
         "description": "Test relation",
-        "direction": edge.EdgeDirection.START_TO_END,
-        "start_node": start_node,
-        "end_node": end_node,
-        "edge_type": edge.EdgeType.FEDORA_MESSAGING,
+        "direction": edge.EdgeDirection.START_TO_END.value,
+        "start_node": START_NODE.to_dict(),
+        "end_node": END_NODE.to_dict(),
+        "edge_type": edge.EdgeType.FEDORA_MESSAGING.value,
     }
 
     test_edge = edge.Edge.from_dict(edge_dict)
@@ -126,15 +122,13 @@ def test_edge_object_comparison():
     Assert that comparison operator is working.
     """
     code = uuid.uuid4()
-    start_node = mock.Mock()
-    end_node = mock.Mock()
     edge_dict = {
         "code": code,
         "name": "test",
         "description": "Test relation",
         "direction": edge.EdgeDirection.START_TO_END,
-        "start_node": start_node,
-        "end_node": end_node,
+        "start_node": START_NODE.to_dict(),
+        "end_node": END_NODE.to_dict(),
         "edge_type": edge.EdgeType.FEDORA_MESSAGING,
     }
 
@@ -149,15 +143,13 @@ def test_edge_object_comparison_wrong_object():
     Assert that comparison operator is failing with wrong type of object.
     """
     code = uuid.uuid4()
-    start_node = mock.Mock()
-    end_node = mock.Mock()
     edge_dict = {
         "code": code,
         "name": "test",
         "description": "Test relation",
         "direction": edge.EdgeDirection.START_TO_END,
-        "start_node": start_node,
-        "end_node": end_node,
+        "start_node": START_NODE.to_dict(),
+        "end_node": END_NODE.to_dict(),
         "edge_type": edge.EdgeType.FEDORA_MESSAGING,
     }
 
