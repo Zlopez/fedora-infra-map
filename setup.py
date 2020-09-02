@@ -58,7 +58,11 @@ setup(
         "Programming Language :: Python :: 3.8",
     ],
     description="Interactive map of the Fedora Infrastructure applications ",
-    entry_points={"console_scripts": ["fedora_infra_map=fedora_infra_map.cli:main",],},
+    entry_points={
+        "console_scripts": [
+            "fedora_infra_map=fedora_infra_map.cli:main",
+        ],
+    },
     install_requires=get_requirements(),
     license="GNU General Public License v3",
     long_description=readme + "\n\n" + history,

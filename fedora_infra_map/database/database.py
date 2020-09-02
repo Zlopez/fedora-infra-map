@@ -15,20 +15,17 @@
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-"""Use case for retrieving list of nodes and edges."""
-from fedora_infra_map.database.database import Database
+""" Abstract implementation of database. """
 
 
-class NodeEdgeListUseCase:
+class Database:
     """
-    Class handling the list use case.
-
-    Attributes:
-      db: database object
+    Abstract class for database.
+    Should be inherited by every database implementation.
     """
 
-    def __init__(self, db: Database):
-        self.db = db
-
-    def execute(self):
-        return self.db.list()
+    def list(self):
+        """
+        List data in database.
+        """
+        raise NotImplementedError
